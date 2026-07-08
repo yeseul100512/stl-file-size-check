@@ -1,3 +1,5 @@
+[코드 설명]
+
 _enable_dpi_awareness()
 Windows 고해상도 모니터에서 tkinter 창이 흐릿하게 보이는 문제를 막기 위한 함수다. ctypes를 이용해 Windows API의 DPI 인식 모드를 설정한다. Per-Monitor DPI Aware 설정이 실패하면 구버전 방식(SetProcessDPIAware)으로 대체 시도하고, 그마저 실패해도 무시하고 넘어가도록 예외 처리가 되어 있다. Windows가 아닌 환경에서는 아예 실행되지 않는다.
 
